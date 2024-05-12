@@ -10,7 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item STEEL = registerItem("steel", new Item(new Item.Settings()));
+    public static final Item STEEL = registerItem("steel_ingot", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(STEEL);
