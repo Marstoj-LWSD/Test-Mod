@@ -11,9 +11,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item STEEL = registerItem("steel_ingot", new Item(new Item.Settings()));
+    public static final Item RAW_STEEL = registerItem("raw_steel", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(STEEL);
+        entries.add(RAW_STEEL);
     }
 
     private static Item registerItem(String name, Item item) {

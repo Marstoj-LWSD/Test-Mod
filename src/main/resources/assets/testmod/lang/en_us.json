@@ -1,3 +1,6 @@
 {
-  "item.testmod.steel_ingot": "Steel Ingot"
+  "item.testmod.steel_ingot": "Steel Ingot",
+  "item.testmod.raw_steel": "Raw Steel",
+
+  "block.testmod.steel_ore": "Steel Ore"
 }
