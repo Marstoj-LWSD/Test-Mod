@@ -10,12 +10,16 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item STEEL = registerItem("steel_ingot", new Item(new Item.Settings()));
+    public static final Item STEEL_INGOT = registerItem("steel_ingot", new Item(new Item.Settings()));
     public static final Item RAW_STEEL = registerItem("raw_steel", new Item(new Item.Settings()));
+    public static final Item STEEL_SHEET = registerItem("steel_sheet", new Item(new Item.Settings()));
+    public static final Item STEEL_SCRAP = registerItem("steel_scrap", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
-        entries.add(STEEL);
+        entries.add(STEEL_INGOT);
         entries.add(RAW_STEEL);
+        entries.add(STEEL_SHEET);
+        entries.add(STEEL_SCRAP);
     }
 
     private static Item registerItem(String name, Item item) {
