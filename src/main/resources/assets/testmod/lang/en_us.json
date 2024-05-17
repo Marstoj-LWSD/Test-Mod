@@ -4,6 +4,9 @@
   "item.testmod.steel_sheet": "Steel Sheet",
   "item.testmod.steel_scrap": "Steel Scrap",
 
+  "item.testmod.steel_pickaxe": "Steel Pickaxe",
+  "item.testmod.steel_axe": "Steel Axe",
+
 
   "block.testmod.steel_ore": "Steel Ore"
 }
