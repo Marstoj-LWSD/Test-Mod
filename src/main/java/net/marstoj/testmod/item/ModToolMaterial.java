@@ -9,7 +9,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    STEEL(BlockTags.INCORRECT_FOR_IRON_TOOL, 400, 7.0f, 2.5f, 12, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+    STEEL(BlockTags.INCORRECT_FOR_IRON_TOOL, 400, 7.0f, 2.0f, 12, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
