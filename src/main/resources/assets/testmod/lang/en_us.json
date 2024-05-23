@@ -6,7 +6,13 @@
 
   "item.testmod.steel_pickaxe": "Steel Pickaxe",
   "item.testmod.steel_axe": "Steel Axe",
+  "item.testmod.steel_shovel": "Steel Shovel",
   "item.testmod.steel_sword": "Steel Sword",
+
+  "item.testmod.steel_helmet": "Steel Helmet",
+  "item.testmod.steel_chestplate": "Steel Chestplate",
+  "item.testmod.steel_leggings": "Steel Leggings",
+  "item.testmod.steel_boots": "Steel Boots",
 
 
   "block.testmod.steel_ore": "Steel Ore"

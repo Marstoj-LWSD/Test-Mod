@@ -19,6 +19,12 @@ public class ModItems {
     public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe", new PickaxeItem(ModToolMaterial.STEEL, new Item.Settings().maxCount(1).attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.STEEL, 1.0f,-2.8f ))));
     public static final Item STEEL_AXE = registerItem("steel_axe", new AxeItem(ModToolMaterial.STEEL, new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.STEEL, 5.0f,-3.0f ))));
     public static final Item STEEL_SWORD = registerItem("steel_sword", new SwordItem(ModToolMaterial.STEEL, new Item.Settings().maxCount(1).attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.STEEL, 3,-2.4f ))));
+    public static final Item STEEL_SHOVEL = registerItem("steel_shovel", new ShovelItem(ModToolMaterial.STEEL, new Item.Settings().maxCount(1).attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.STEEL, 1.5f,-3.0f ))));
+    public static final Item STEEL_HELMET = registerItem("steel_helmet", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.HELMET,new Item.Settings().maxCount(1)));
+    public static final Item STEEL_CHESTPLATE = registerItem("steel_chestplate", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.CHESTPLATE,new Item.Settings().maxCount(1)));
+    public static final Item STEEL_LEGGINGS = registerItem("steel_leggings", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.LEGGINGS,new Item.Settings().maxCount(1)));
+    public static final Item STEEL_BOOTS = registerItem("steel_boots", new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS,new Item.Settings().maxCount(1)));
+
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
@@ -31,11 +37,16 @@ public class ModItems {
     private static void addItemsToToolItemGroup(FabricItemGroupEntries entries) {
         entries.add(STEEL_PICKAXE);
         entries.add(STEEL_AXE);
+        entries.add(STEEL_SHOVEL);
     }
 
     private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
         entries.add(STEEL_SWORD);
         entries.add(STEEL_AXE);
+        entries.add(STEEL_HELMET);
+        entries.add(STEEL_CHESTPLATE);
+        entries.add(STEEL_LEGGINGS);
+        entries.add(STEEL_BOOTS);
     }
 
     private static Item registerItem(String name, Item item) {
