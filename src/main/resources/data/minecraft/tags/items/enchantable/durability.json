@@ -2,6 +2,7 @@
   "values": [
     "testmod:steel_pickaxe",
     "testmod:steel_axe",
-    "testmod:steel_sword"
+    "testmod:steel_sword",
+    "testmod:steel_shovel"
   ]
 }
