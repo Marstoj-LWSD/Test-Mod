@@ -1,8 +1,13 @@
 {
   "values": [
+    "testmod:steel_boots",
+    "testmod:steel_leggings",
+    "testmod:steel_chestplate",
+    "testmod:steel_helmet",
     "testmod:steel_pickaxe",
     "testmod:steel_axe",
     "testmod:steel_sword",
     "testmod:steel_shovel"
+
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "front": "testmod:block/electric_furnace_front_on",
+    "side": "testmod:block/electric_furnace_side",
+    "top": "testmod:block/electric_furnace_top"
+  }
+}

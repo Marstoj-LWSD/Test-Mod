@@ -15,5 +15,8 @@
   "item.testmod.steel_boots": "Steel Boots",
 
 
-  "block.testmod.steel_ore": "Steel Ore"
+  "block.testmod.steel_ore": "Steel Ore",
+  "block.testmod.electric_furnace": "Electric Furnace",
+
+  "container.electric_furnace": "Electric Furnace"
 }

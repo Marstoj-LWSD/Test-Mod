@@ -25,7 +25,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.CHESTPLATE, 7);
         map.put(ArmorItem.Type.HELMET, 3);
         map.put(ArmorItem.Type.BODY, 5);
-    }), 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
+    }), 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
 
     private static RegistryEntry<ArmorMaterial> register(String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(new Identifier(TestMod.MOD_ID, id)));
