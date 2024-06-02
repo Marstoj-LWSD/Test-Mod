@@ -36,11 +36,18 @@ public class ElectricFurnaceScreen extends HandledScreen<ElectricFurnaceScreenHa
         int y = (height - backgroundHeight) / 2;
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
         renderProgressArrow(context, x, y);
+        renderRedstoneDust(context, x, y);
     }
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if (handler.isCrafting()) {
             context.drawTexture(TEXTURE, x + 79, y + 35, 200, 0, handler.getScaledProgress(), 16);
+        }
+    }
+
+    private void renderRedstoneDust(DrawContext context, int x, int y) {
+        if (handler.isBurning()) {
+            context.drawTexture(TEXTURE, x + 57, y + 55, 200, 20, 16, 16);
         }
     }
 

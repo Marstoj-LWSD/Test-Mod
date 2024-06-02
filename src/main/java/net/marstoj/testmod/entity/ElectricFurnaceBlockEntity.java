@@ -37,6 +37,7 @@ public class ElectricFurnaceBlockEntity extends BlockEntity implements ExtendedS
     private static int OUTPUT_SLOT = 1;
     private int cookTime;
     private int totalCookTime = 200;
+    public boolean isPowered = false;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
@@ -106,7 +107,7 @@ public class ElectricFurnaceBlockEntity extends BlockEntity implements ExtendedS
         Inventories.readNbt(nbt, inventory, registryLookup);
     }
     public void tick(World world, BlockPos pos, BlockState state, ElectricFurnaceBlockEntity blockEntity) {
-        if (blockEntity.isBurning(world, pos)) {
+        if (blockEntity.isBurning(world, pos, state)) {
             if (!world.getBlockState(pos).get(Properties.LIT)) {
                 world.setBlockState(pos, state.with(Properties.LIT, true));
             }
@@ -130,8 +131,13 @@ public class ElectricFurnaceBlockEntity extends BlockEntity implements ExtendedS
         }
     }
 
-    private boolean isBurning(World world, BlockPos pos) {
-        return world.isReceivingRedstonePower(pos);
+    private boolean isBurning(World world, BlockPos pos, BlockState state) {
+        if (world.isReceivingRedstonePower(pos)) {
+            isPowered = true;
+            return true;
+        }
+        isPowered = false;
+        return false;
     }
 
     private void resetProgress() {

@@ -15,6 +15,8 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.world.World;
 
 public class ElectricFurnaceScreenHandler extends ScreenHandler {
@@ -23,6 +25,7 @@ public class ElectricFurnaceScreenHandler extends ScreenHandler {
     public final ElectricFurnaceBlockEntity blockEntity;
     protected final World world;
     private final RecipeType<SmeltingRecipe> recipeType = RecipeType.SMELTING;
+
 
     public ElectricFurnaceScreenHandler(int syncId, PlayerInventory inventory, ElectricFurnacePayload payload) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(payload.blockPos()), new ArrayPropertyDelegate(5));
@@ -59,6 +62,10 @@ public class ElectricFurnaceScreenHandler extends ScreenHandler {
 
     public boolean isCrafting() {
         return this.propertyDelegate.get(0) > 0;
+    }
+
+    public boolean isBurning(){
+        return blockEntity.isPowered;
     }
 
     public int getScaledProgress() {

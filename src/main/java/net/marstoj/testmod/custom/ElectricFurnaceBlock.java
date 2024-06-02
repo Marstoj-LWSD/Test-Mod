@@ -37,7 +37,7 @@ public class ElectricFurnaceBlock extends BlockWithEntity implements BlockEntity
 
     public ElectricFurnaceBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(LIT, false).with(POWERED, false));
+        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(LIT, false));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ElectricFurnaceBlock extends BlockWithEntity implements BlockEntity
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, LIT, POWERED);
+        builder.add(FACING, LIT);
     }
 
     @Nullable
